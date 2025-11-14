@@ -1,0 +1,84 @@
+.update_profile_container {
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form_content {
+  padding: 20px;
+}
+
+.update_profile_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.input_field {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 520px;
+}
+
+.password_field_group {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  gap: 15px;
+}
+
+.password_field {
+  position: relative;
+  flex: 1;
+}
+
+
+.eye_icon {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.update_btn {
+  padding: 12px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.update_btn:hover {
+  background-color: #45a049;
+}
+
+.error_message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.form_actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loader {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}

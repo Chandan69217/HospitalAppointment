@@ -1,0 +1,103 @@
+.services-section {
+  width: 100%;
+  background: #f6f9fc;
+
+  text-align: center;
+}
+
+.services-header .badge {
+  display: inline-flex;
+  align-items: center;
+  background: #eaf4ff;
+  color: #0057b7;
+  padding: 6px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.services-header .badge .icon {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.services-header h2 {
+  font-size: 34px;
+  color: #081c3a;
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.services-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding: 0 100px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 40px;
+  color: #ff9900;
+  background: #eef5ff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  color: #081c3a;
+  font-weight: 700;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0 20px 0;
+}
+
+.service-card button {
+  background: #003c80;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  width: 160px;
+}
+
+.service-card button:hover {
+  background: #0057b7;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+    padding: 0 30px;
+  }
+
+  .services-header h2 {
+    font-size: 26px;
+  }
+}

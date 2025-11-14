@@ -1,0 +1,152 @@
+.doctors-section {
+  text-align: center;
+  background: #f7faff;
+  padding: 80px 0;
+  position: relative;
+}
+
+.doctors-header .badge {
+  display: inline-flex;
+  align-items: center;
+  background: #e9f3ff;
+  color: #004080;
+  font-weight: 600;
+  border-radius: 30px;
+  padding: 6px 14px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.doctors-header .icon {
+  margin-right: 6px;
+}
+
+.doctors-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #011d4a;
+  margin-bottom: 50px;
+}
+
+.doctors-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-btn {
+  background: white;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  color: #003366;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #004aad;
+  color: #fff;
+}
+
+.nav-btn.left {
+  position: absolute;
+  left: 60px;
+}
+
+.nav-btn.right {
+  position: absolute;
+  right: 60px;
+}
+
+.doctor-cards {
+  display: flex;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.doctor-card {
+  background: #fff;
+  border-radius: 20px;
+  width: 320px;
+  box-shadow: 0 4px 15px rgba(0, 50, 100, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.doctor-card:hover {
+  transform: translateY(-6px);
+}
+
+.doctor-image {
+  position: relative;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.doctor-icon {
+  position: absolute;
+  bottom: -20px;
+  right: 25px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  color: #004aad;
+  font-size: 20px;
+}
+
+.doctor-info {
+  padding: 25px;
+  text-align: left;
+}
+
+.doctor-name {
+  color: #d21f3c;
+  font-weight: 600;
+  font-size: 14px;
+  background: #ffe4e8;
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.doctor-specialty {
+  color: #002060;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.doctor-desc {
+  color: #666;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.read-btn {
+  background: #ff9900;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-btn:hover {
+  background: #002d73;
+}
