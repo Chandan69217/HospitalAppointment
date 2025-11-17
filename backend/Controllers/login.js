@@ -8,7 +8,7 @@ const Admin = require("../Models/admin");
 
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const {email, password } = req.body;
     console.log("Login attempt:", email);
 
     // Check for a user in all three models

@@ -21,7 +21,7 @@ router.put('/appointments/:id', validateObjectId, appointmentController.updateAp
 router.put('/appointmentstatus/:id', validateObjectId, appointmentController.updateAppointmentStatus);
 router.delete('/appointments/:id', validateObjectId, appointmentController.deleteAppointment);
 // router.get('/available-sessions', appointmentController.getAvailableSessions);
-router.get('/available-sessions', appointmentController.getAvailableTime);
+router.get('/available-sessions/:id', appointmentController.getAvailableTime);
 
 
 module.exports = router;

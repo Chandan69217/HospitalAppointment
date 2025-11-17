@@ -1,0 +1,129 @@
+.carousel-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+/* Outer track */
+.carousel-track {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Inner sliding row */
+.carousel-inner {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.45s cubic-bezier(.22, .9, .37, 1);
+    will-change: transform;
+    padding: 6px 10px;
+    /* small padding to show rounded corners if any */
+}
+
+/* Each direct child (card wrapper) - default desktop size: 4 visible */
+.carousel-item {
+    flex: 0 0 calc((100% - 90px) / 4);
+    /* 30px gap x 3 = 90 */
+    box-sizing: border-box;
+}
+
+/* nav buttons */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    color: #003366;
+    border-radius: 50%;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    cursor: pointer;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn.left {
+    left: 14px;
+}
+
+.nav-btn.right {
+    right: 14px;
+}
+
+.nav-btn:hover {
+    background: #004aad;
+    color: #fff;
+}
+
+/* --- RESPONSIVE CARD SIZES --- */
+
+/* Desktop wide: 4 cards visible (already) */
+
+/* Large tablet: 3 cards */
+@media (max-width: 992px) {
+    .carousel-item {
+        flex: 0 0 calc((100% - 60px) / 3);
+        /* 2 gaps = 60px */
+    }
+
+    .carousel-inner {
+        gap: 20px;
+    }
+
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet / small: 2 cards */
+@media (max-width: 768px) {
+    .carousel-container{
+        padding: 0 20px;
+    }
+    .carousel-item {
+        flex: 0 0 calc((100% - 30px) / 2);
+        /* 1 gap = 30px */
+    }
+
+    .carousel-inner {
+        gap: 18px;
+    }
+
+    .nav-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+}
+
+/* Mobile: 1 card */
+@media (max-width: 520px) {
+    .carousel-container {
+            padding: 0 20px;
+        }
+    .carousel-item {
+        flex: 0 0 100%;
+    }
+
+    .carousel-inner {
+        gap: 14px;
+    }
+
+    /* Keep buttons visible — smaller and closer to edge */
+
+    .nav-btn.left {
+        left: 2px;
+    }
+
+    .nav-btn.right {
+        right: 2px;
+    }
+}
