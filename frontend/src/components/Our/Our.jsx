@@ -48,13 +48,14 @@ import "./Our.css";
 import { Urls } from "../../utilitizes/Urls";
 import axios from "axios";
 import { serviceIconsMap } from "../../utilitizes/Doctor'sSpecializations";
-
+import { useNavigate } from "react-router-dom";
 
 
 
 const Our = () => {
   const [doctorCounts, setDoctorCounts] = useState({});
 
+  const navigation = useNavigate()
   const fetchSpecializationData = async () => {
     try {
       const response = await axios.get(`${Urls.BaseUrl}${Urls.GetAllSpecializedDoctors}`);
@@ -99,7 +100,9 @@ const Our = () => {
                 <h3>{key}</h3>
                 <p>{count} Doctors</p>
 
-                <button>READ MORE</button>
+                <button onClick={()=>{
+                  navigation(`/doctors/${key}`)
+                }}>READ MORE</button>
               </div>
             );
           })}

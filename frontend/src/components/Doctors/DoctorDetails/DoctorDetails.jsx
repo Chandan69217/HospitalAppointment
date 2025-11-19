@@ -34,8 +34,8 @@ const DoctorDetails = () => {
 
     return (
         <div className="doctor-profile">
-            <div className="doctor-image">
-                <img src={doctor.img} alt={doctor.name} />
+            <div className="image">
+                <img src={doctor.image} alt={doctor.name} />
             </div>
 
             <div className="doctor-info">
@@ -54,15 +54,20 @@ const DoctorDetails = () => {
                 <p className="doctor-description">{doctor.description}</p>
 
                 <div className="doctor-working-hours">
-                    <h4>Working Hours:</h4>
-                    <ul>
+                    <h4>Working Hours</h4>
+
+                    <div className="working-grid">
                         {Object.entries(doctor.workingHours).map(([day, hours]) => (
-                            <li key={day}>
-                                {day}: {hours.from} - {hours.to}
-                            </li>
+                            <div key={day} className="working-card">
+                                <div className="working-day">{day}</div>
+                                <div className="working-time">
+                                    {hours.from} - {hours.to}
+                                </div>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
     );

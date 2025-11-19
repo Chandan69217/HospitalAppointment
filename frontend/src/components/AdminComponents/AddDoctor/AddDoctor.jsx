@@ -75,7 +75,7 @@ const AddDoctor = ({ onClose, onAddDoctor }) => {
     if (!passwordPattern.test(Password)) { alert("Weak password"); return; }
 
     try {
-      console.log(formData)
+    
       const response = await axios.post("http://localhost:8585/api/doctor", formData);
       if (response.status === 201) {
         alert("Doctor Added Successfully");
@@ -88,11 +88,11 @@ const AddDoctor = ({ onClose, onAddDoctor }) => {
           Password: "",
           Description: "",
           Degrees: [""],
-          WorkingHours: daysOfWeek.reduce((acc, day) => ({ ...acc, [day]: { from: "", to: "" } }), {}),
+          WorkingHours: daysOfWeek.reduce((acc, day) => ({ ...acc, [day]: { from: "09:00", to: "17:00" } }), {}),
           Image: ""
         });
-        onAddDoctor(formData);
-        onClose();
+        // onAddDoctor(formData);
+        // onClose();
       }
     } catch (err) {
       console.error(err.message);

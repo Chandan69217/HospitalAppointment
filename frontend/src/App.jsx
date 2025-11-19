@@ -31,6 +31,7 @@ import Schedule from "./components/AdminComponents/Schedule/Schedule";
 import UpdateUserProfile from "./components/PatientComponenets/UpdateUserProfile/UpdateUserProfile";
 import DoctorDetails from "./components/Doctors/DoctorDetails/DoctorDetails";
 import AddDoctor from "./components/AdminComponents/AddDoctor/AddDoctor";
+import AllSpecializedDoctors from "./components/Our/AllSpecializedDoctors";
 
 
 const Home = lazy(() => import("./pages/Home/Home"));
@@ -61,6 +62,7 @@ const App = () => {
           {/* Public Routes */}
           <Route path="/" element={<Home />} />
           <Route path="/doctor-details/:doctorId" element={<DoctorDetails/>} />
+          <Route path="/doctors/:specialization" element={<AllSpecializedDoctors/>} />
           <Route path="/registration" element={<Registration />} />
           <Route path="/login" element={<Login />} />
 
