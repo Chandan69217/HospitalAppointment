@@ -1,0 +1,75 @@
+.doctor-profile {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.doctor-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    /* border-radius: 20px; */
+}
+
+.doctor-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.doctor-name {
+    color: #d21f3c;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.doctor-degree {
+    color: #002060;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.doctor-specialization {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.doctor-experience,
+.doctor-contact,
+.doctor-email {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.doctor-description {
+    margin: 12px 0;
+    line-height: 1.5;
+}
+
+.doctor-working-hours h4 {
+    margin-bottom: 6px;
+}
+
+.doctor-working-hours ul {
+    list-style: none;
+    padding: 0;
+}
+
+.doctor-working-hours li {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.loading,
+.error {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+}

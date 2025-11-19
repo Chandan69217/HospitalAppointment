@@ -83,6 +83,10 @@
     }
 }
 
+.carousel-item.cloned {
+    opacity: 1;
+}
+
 /* Tablet / small: 2 cards */
 @media (max-width: 768px) {
     .carousel-container{

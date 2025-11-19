@@ -22,7 +22,19 @@ const doctorSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    degrees: {
+        type: Array,
+        required:false,
+    },
+    image: {
+        type: String,
+        required: true,
+    },
     password: {
+        type: String,
+        required: true,
+    },
+    description: {
         type: String,
         required: true,
     },

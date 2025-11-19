@@ -3,3 +3,19 @@ input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
+.icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.icon i {
+  color: #004080 !important;
+}

@@ -3,7 +3,6 @@ import "./SelectFields.css";
 
 const SelectField = ({
     label,
-    name,
     value,
     onChange,
     options = [],
@@ -18,7 +17,7 @@ const SelectField = ({
                 </label>
             )}
             <div className={`select-wrapper ${variant}`}>
-                <select name={name} value={value} onChange={onChange} required={required}>
+                <select name={label} value={value} onChange={onChange} required={required}>
                     <option value="">Select {label?.toLowerCase()}</option>
                     {options.map((opt, index) => (
                         <option key={index} value={opt.value || opt}>

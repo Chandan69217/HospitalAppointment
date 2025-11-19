@@ -72,14 +72,14 @@
   }
   
   .icon {
-    width: 30px;
+    /* width: 30px;
     height: 30px;
     display: flex;align-items: center;
     justify-content: center;
     background-color: rgb(73, 70, 70);
     border-radius: 50%;
     margin-left: 10px;
-    color:#bfd3fa;
+    color:#bfd3fa; */
   }
   
  /* Upcoming bookings section * */

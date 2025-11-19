@@ -20,7 +20,8 @@
     align-items: center;
 }
 
-.input-wrapper input {
+.input-wrapper input,
+.input-wrapper textarea {
     width: 100%;
     padding: 12px;
     border: 1.5px solid #ccc;
@@ -30,11 +31,16 @@
     transition: all 0.3s ease;
 }
 
-.input-wrapper input:focus {
+.input-wrapper input:focus
+.input-wrapper textarea:focus {
     border-color: #007bff;
     box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
 }
 
+.input-wrapper textarea {
+    resize: vertical;
+    min-height: 80px;
+}
 
 
 

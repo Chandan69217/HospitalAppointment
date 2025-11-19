@@ -11,18 +11,32 @@ const InputField = ({
     showToggle = false,
     onToggle,
     icon,
+    isTextArea = false,
+    rows = 4,
 }) => {
     return (
         <div className="input-group">
             {label && <label>{label} {required && <span className="required-star">*</span>} </label>}
             <div className="input-wrapper">
-                <input
-                    type={type}
-                    value={value}
-                    placeholder={placeholder}
-                    onChange={onChange}
-                    required={required}
-                />
+                {isTextArea ? (
+                    <textarea
+                        name={label}
+                        value={value}
+                        placeholder={placeholder}
+                        onChange={onChange}
+                        required={required}
+                        rows={rows}
+                    />
+                ) : (
+                    <input
+                        name={label}
+                        type={type}
+                        value={value}
+                        placeholder={placeholder}
+                        onChange={onChange}
+                        required={required}
+                    />
+                )}
                 {showToggle && (
                     <div className="toggle-icon" onClick={onToggle}>
                         {icon}
@@ -34,3 +48,4 @@ const InputField = ({
 };
 
 export default InputField;
+

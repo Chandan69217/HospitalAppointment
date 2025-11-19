@@ -4,6 +4,7 @@ import "../../Styles/Login.css";
 import axios from "axios";
 import InputField from "../../components/Widgets/InputFields/InputField";
 import Button from "../../components/Widgets/Buttons/Button";
+import { Urls } from "../../utilitizes/Urls";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +27,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8585/api/login", { email, password });
+      
+      const response = await axios.post(
+        `${Urls.BaseUrl}${Urls.Login}`,
+        { email, password }
+      );
 
       if (response.status >= 200 && response.status < 300) {
         const { token, role, user } = response.data;

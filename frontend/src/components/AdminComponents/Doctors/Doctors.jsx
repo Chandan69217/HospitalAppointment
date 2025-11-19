@@ -3,6 +3,7 @@ import "./Doctors.css";
 import axios from "axios";
 import Header from "../../Header/Header";
 import AddDoctor from "../AddDoctor/AddDoctor";
+import { useNavigate } from "react-router-dom";
 
 const Doctors = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,6 +11,7 @@ const Doctors = () => {
   const [filteredDoctors, setFilteredDoctors] = useState([]);
   const [nameFilter, setNameFilter] = useState("");
   const [specializationFilter, setSpecializationFilter] = useState("");
+  const navigate = useNavigate();
 
   // Fetch all doctors when the component mounts
   useEffect(() => {
@@ -118,7 +120,10 @@ const Doctors = () => {
           Reset Filters
         </button>
 
-        <button onClick={() => setIsOpen(true)} className="add-doctor-button">
+        {/* <button onClick={() => setIsOpen(true)} className="add-doctor-button">
+          Add Doctor
+        </button> */}
+        <button onClick={() => navigate("/admin/doctors/add")} className="add-doctor-button">
           Add Doctor
         </button>
       </div>

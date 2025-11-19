@@ -17,13 +17,11 @@
   font-weight: 600;
   border-radius: 30px;
   padding: 6px 14px;
+  gap:10px;
   margin-bottom: 10px;
   font-size: 14px;
 }
 
-.doctors-header .icon {
-  margin-right: 6px;
-}
 
 .doctors-header h2 {
   font-size: 2rem;
